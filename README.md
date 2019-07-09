@@ -9,14 +9,16 @@ via a webserver running on (default) port 8081.
 
 ## Building
 Either use the normal go techniques, or just build in directory:
-```go build main.go
-   mv main powermon```
+```
+go build main.go
+mv main powermon
+```
  
 ## Web server use:
-```nohup ./powermon >& /dev/null &```
+`nohup ./powermon >& /dev/null &`
 
 ## Interactive use:
-```./powermon -i```
+`./powermon -i`
 
 Note that this version displays the voltage across both hot lines,
 as I'm using it in a 240V application.  You can change the registers
