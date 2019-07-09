@@ -35,3 +35,11 @@ mv main powermon
 ## Interactive use:
 `./powermon -i`
 
+### Output
+
+```
+dga@server:~$ ./powermon -i
+Watts: 19736  volts: 220.41   frequency: 59.9833 hz
+Watts: 19696  volts: 220.39   frequency: 59.9826 hz
+Watts: 19682  volts: 220.37   frequency: 59.9832 hz
+```
