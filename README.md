@@ -1,6 +1,7 @@
 # Shark 100 Power Meter Monitoring and Display
 
 The Shark 100 power meter is network-connected but does not have a web server.
+It does, however, provide a TCP modbus interface.
 
 This is a simple go server that reads power draw, voltage, and frequency
 from the Shark and either logs it to the console or makes it available
