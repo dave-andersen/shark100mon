@@ -7,6 +7,17 @@ This is a simple go server that reads power draw, voltage, and frequency
 from the Shark and either logs it to the console or makes it available
 via a webserver running on (default) port 8081.
 
+## Building
+Either use the normal go techniques, or just build in directory:
+```go build main.go
+   mv main powermon```
+ 
+## Web server use:
+```nohup ./powermon >& /dev/null &```
+
+## Interactive use:
+```./powermon -i```
+
 Note that this version displays the voltage across both hot lines,
 as I'm using it in a 240V application.  You can change the registers
 it reads to show different values.  (They're listed in the manual
