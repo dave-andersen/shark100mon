@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Power Use</title>
+    <style>
+      body { background-color: black; color: green; }
+      span#watts, span#volts, span#frequency {
+      font-size: 1000%;
+      }
+      span#hz { font-size: 300%; }
+    </style>
+  </head>
+  <body>
+    Watts: <span id="watts">loading</span><br />
+    Volts: <span id="volts">loading</span><br />
+    Freq: <span id="frequency">loading</span><span id="hz">Hz</span>
+    <script async="async">
+
+      function gotValue() {
+          var obj = JSON.parse(this.responseText)
+          document.getElementById("watts").innerHTML = obj.watts;
+          document.getElementById("volts").innerHTML = obj.volts;
+          document.getElementById("frequency").innerHTML = obj.frequency;
+      }
+
+      var oReq = new XMLHttpRequest();
+      oReq.addEventListener("load", gotValue);
+      function updateValue() {
+      oReq.open("GET", "/power");
+      oReq.send();
+      }
+      updateValue();
+      var intervalID = setInterval(updateValue, 2000);  // 2 seconds
+      
+    </script>
+
+    
+  </body>
+</html>
