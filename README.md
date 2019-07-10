@@ -32,6 +32,10 @@ mv main powermon
 ## Web server use:
 `nohup ./powermon >& /dev/null &`
 
+### Web page
+
+![Image of web server output showing watts, volts, and frequency in large green text](example_display.png?raw=true)
+
 ## Interactive use:
 `./powermon -i`
 
